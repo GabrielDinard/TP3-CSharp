@@ -1,0 +1,8 @@
+C:\Users\gabri\source\repos\Aniversario\Aniversario.Model\bin\Debug\netcoreapp3.1\Aniversario.Model.deps.json
+C:\Users\gabri\source\repos\Aniversario\Aniversario.Model\bin\Debug\netcoreapp3.1\Aniversario.Model.dll
+C:\Users\gabri\source\repos\Aniversario\Aniversario.Model\bin\Debug\netcoreapp3.1\Aniversario.Model.pdb
+C:\Users\gabri\source\repos\Aniversario\Aniversario.Model\obj\Debug\netcoreapp3.1\Aniversario.Model.csproj.CoreCompileInputs.cache
+C:\Users\gabri\source\repos\Aniversario\Aniversario.Model\obj\Debug\netcoreapp3.1\Aniversario.Model.AssemblyInfoInputs.cache
+C:\Users\gabri\source\repos\Aniversario\Aniversario.Model\obj\Debug\netcoreapp3.1\Aniversario.Model.AssemblyInfo.cs
+C:\Users\gabri\source\repos\Aniversario\Aniversario.Model\obj\Debug\netcoreapp3.1\Aniversario.Model.dll
+C:\Users\gabri\source\repos\Aniversario\Aniversario.Model\obj\Debug\netcoreapp3.1\Aniversario.Model.pdb

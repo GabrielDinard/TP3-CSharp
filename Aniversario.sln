@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aniversario.Apresentacao", "Aniversario\Aniversario.Apresentacao.csproj", "{D4D12BCA-D64B-4643-9516-084B81401262}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aniversario.Apresentacao", "Aniversario\Aniversario.Apresentacao.csproj", "{D4D12BCA-D64B-4643-9516-084B81401262}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apresentacao", "Apresentacao", "{39AE2C14-5D61-4332-9676-DA1C7010255A}"
 EndProject
@@ -11,9 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dados", "Dados", "{83505100
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{2253FD1F-B39E-4F73-9B72-D9307F6458F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aniversario.Dados", "Aniversario.Dados\Aniversario.Dados.csproj", "{56782709-3B42-4544-8E2B-74086AB69CFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aniversario.Dados", "Aniversario.Dados\Aniversario.Dados.csproj", "{56782709-3B42-4544-8E2B-74086AB69CFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aniversario.Model", "Aniversario.Model\Aniversario.Model.csproj", "{BE6B4104-3578-4ECE-9169-6264AD27639E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aniversario.Model", "Aniversario.Model\Aniversario.Model.csproj", "{BE6B4104-3578-4ECE-9169-6264AD27639E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

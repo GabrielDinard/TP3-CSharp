@@ -15,7 +15,7 @@ namespace Aniversario.Apresentacao
         {
             Console.WriteLine(texto);
         }
-
+             
         public static void MenuPrincipal()
         {
             EscreverNaTela("Gerenciador de Aniversários");
@@ -53,11 +53,11 @@ namespace Aniversario.Apresentacao
             Console.WriteLine("Informe a data de aniversário da pessoa");
             var dataDeAniversario = DateTime.Parse(Console.ReadLine());
 
-            var pessoa = new Pessoa(nome, sobrenome, dataDeAniversario);            
+            var pessoa = new Pessoa(nome, sobrenome, dataDeAniversario);
 
-            BancoDeDadosEmMemoria bancodadosmemoria = new BancoDeDadosEmMemoria();
+            BancoDeDados BancoDeDados = new BancoDeDadosEmArquivo();
 
-            bancodadosmemoria.Salvar(pessoa);
+            BancoDeDados.Salvar(pessoa);
 
             Console.WriteLine("A pessoa foi cadastrada com sucesso!");
             Console.WriteLine("Pressione qualquer tecla para continuar");
@@ -102,21 +102,21 @@ namespace Aniversario.Apresentacao
             Console.WriteLine("Digite o nome da pessoa:");
             string nome = Console.ReadLine();
 
-            BancoDeDadosEmMemoria bancodadosmemoria = new BancoDeDadosEmMemoria();           
+            BancoDeDados BancoDeDados = new BancoDeDadosEmArquivo();
 
-            var pessoasEncontradas = bancodadosmemoria.BuscarTodasAsPessoas(nome);
+            var pessoasEncontradas = BancoDeDados.BuscarTodasAsPessoas(nome);
 
             int quantidadeDePessoasEncontradas = pessoasEncontradas.Count();
 
             if (quantidadeDePessoasEncontradas > 0)
             {
-                Console.WriteLine("Pessoas encontradas:");
+                Console.WriteLine("\nPessoas encontradas:");
 
-                foreach (var pessoa in bancodadosmemoria.BuscarTodasAsPessoas(nome))
+                foreach (var pessoa in pessoasEncontradas)
                 {
-                    Console.WriteLine($"Nome: {pessoa.Nome} \nSobrenome: {pessoa.Sobrenome} \nData de aniversário: {pessoa.DataDeAniversario}");
+                    Console.WriteLine($"Nome: {nome} \nSobrenome: {pessoa.Sobrenome} \nData de aniversário: {pessoa.DataDeAniversario}");
                     var dataDeAniversario = pessoa.DataDeAniversario;
-                    Console.WriteLine($"Faltam {DiasRestantesAniversario(dataDeAniversario)} dias para o aniversário dessa pessoa");
+                    Console.WriteLine($"Faltam {DiasRestantesAniversario(dataDeAniversario)} dias para o aniversário dessa pessoa\n");
                 }
             }
             else
@@ -132,9 +132,9 @@ namespace Aniversario.Apresentacao
             Console.WriteLine("Digite o sobrenome da pessoa:");
             string sobrenome = Console.ReadLine();
 
-            BancoDeDadosEmMemoria bancodadosmemoria = new BancoDeDadosEmMemoria();
+            BancoDeDados BancoDeDados = new BancoDeDadosEmArquivo();
 
-            var pessoasEncontradas = bancodadosmemoria.BuscarPessoaPelo(sobrenome);
+            var pessoasEncontradas = BancoDeDados.BuscarPessoaPelo(sobrenome);
 
             int quantidadeDePessoasEncontradas = pessoasEncontradas.Count();
 
@@ -142,16 +142,16 @@ namespace Aniversario.Apresentacao
             {
                 Console.WriteLine("Pessoas encontradas:");
 
-                foreach (var pessoa in bancodadosmemoria.BuscarPessoaPelo(sobrenome))
+                foreach (var pessoa in pessoasEncontradas)
                 {
                     Console.WriteLine($"Nome: {pessoa.Nome} \nSobrenome: {pessoa.Sobrenome} \nData de aniversário: {pessoa.DataDeAniversario}");
                     var dataDeAniversario = pessoa.DataDeAniversario;
-                    Console.WriteLine($"Faltam {DiasRestantesAniversario(dataDeAniversario)} dias para o aniversário dessa pessoa");                   
+                    Console.WriteLine($"Faltam {DiasRestantesAniversario(dataDeAniversario)} dias para o aniversário dessa pessoa\n");                   
                 }
             }
             else
             {
-                Console.WriteLine("Nenhuma pessoa encontrada para o nome: " + sobrenome);
+                Console.WriteLine("Nenhuma pessoa encontrada para o sobrenome: " + sobrenome);
             }           
 
             MenuPrincipal();
@@ -159,12 +159,12 @@ namespace Aniversario.Apresentacao
 
         private static void ConsultarPelaData()
         {
-            Console.WriteLine("Digite a data de aniversário da pessoa:");
+            Console.WriteLine("Digite o aniversário da pessoa no formato dd/MM/yyyy:");
             var dataDeAniversario = DateTime.Parse(Console.ReadLine());
 
-            BancoDeDadosEmMemoria bancodadosmemoria = new BancoDeDadosEmMemoria();
+            BancoDeDados BancoDeDados = new BancoDeDadosEmArquivo();
 
-            var pessoasEncontradas = bancodadosmemoria.BuscarTodasAsPessoas(dataDeAniversario);
+            var pessoasEncontradas = BancoDeDados.BuscarTodasAsPessoas(dataDeAniversario);
 
             int quantidadeDePessoasEncontradas = pessoasEncontradas.Count();
 
@@ -172,17 +172,17 @@ namespace Aniversario.Apresentacao
             {
                 Console.WriteLine("Pessoas encontradas");
 
-                foreach (var pessoa in bancodadosmemoria.BuscarTodasAsPessoas(dataDeAniversario))
+                foreach (var pessoa in pessoasEncontradas)
                 {
                     Console.WriteLine($"Nome: {pessoa.Nome} \nSobrenome: {pessoa.Sobrenome} \nData de aniversário: {pessoa.DataDeAniversario}");
+                    var dataDeAniversario1 = pessoa.DataDeAniversario;
+                    Console.WriteLine($"Faltam {DiasRestantesAniversario(dataDeAniversario1)} dias para o aniversário dessa pessoa\n");
                 }
             }
             else
             {
-                Console.WriteLine("Nenhuma pessoa encontrada para o nome: " + dataDeAniversario);
+                Console.WriteLine("Nenhuma pessoa encontrada para a data de aniversário: " + dataDeAniversario);
             }
-
-            Console.WriteLine($"Faltam {DiasRestantesAniversario(dataDeAniversario)} dias para o aniversário dessa pessoa");
 
             MenuPrincipal();
         }
@@ -194,7 +194,7 @@ namespace Aniversario.Apresentacao
                 proximoAniversario = proximoAniversario.AddYears(1);                
             }
 
-            if (dataDeAniversario == DateTime.Today)
+            if (proximoAniversario == DateTime.Today)
             {
                 Console.WriteLine("Hoje é o aniversário dessa pessoa!");               
             }

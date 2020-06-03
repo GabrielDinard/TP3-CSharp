@@ -6,3 +6,4 @@ C:\Users\gabri\source\repos\Aniversario\Aniversario.Model\obj\Debug\netcoreapp3.
 C:\Users\gabri\source\repos\Aniversario\Aniversario.Model\obj\Debug\netcoreapp3.1\Aniversario.Model.AssemblyInfo.cs
 C:\Users\gabri\source\repos\Aniversario\Aniversario.Model\obj\Debug\netcoreapp3.1\Aniversario.Model.dll
 C:\Users\gabri\source\repos\Aniversario\Aniversario.Model\obj\Debug\netcoreapp3.1\Aniversario.Model.pdb
+C:\Users\gabri\source\repos\Aniversario\Aniversario.Model\obj\Debug\netcoreapp3.1\Aniversario.Model.csprojAssemblyReference.cache

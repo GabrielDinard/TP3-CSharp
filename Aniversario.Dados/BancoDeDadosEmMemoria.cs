@@ -55,6 +55,11 @@ namespace Aniversario.Dados
         public override void Excluir(Pessoa pessoa)
         {
             pessoasCadastradas.Remove(pessoa);
-        }       
+        }
+
+        protected override void Alterar(Pessoa pessoa)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

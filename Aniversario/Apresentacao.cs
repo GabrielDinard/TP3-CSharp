@@ -21,7 +21,9 @@ namespace Aniversario.Apresentacao
             EscreverNaTela("Gerenciador de Aniversários");
             EscreverNaTela("1 - Consultar uma pessoa");
             EscreverNaTela("2 - Adicionar uma pessoa");
-            EscreverNaTela("3 - Sair");
+            //EscreverNaTela("3 - Alterar uma pessoa");
+            //EscreverNaTela("4 - Excluir uma pessoa");
+            EscreverNaTela("5 - Sair");
 
             char operacao = Console.ReadLine().ToCharArray()[0];
 
@@ -29,7 +31,9 @@ namespace Aniversario.Apresentacao
             {
                 case '1': ConsultarPessoa(); break;
                 case '2': AdicionarPessoa(); break;
-                case '3': break;
+                //case '3': AlterarPessoa(); break;
+                //case '4': ExcluirPessoa(); break;
+                case '5': break;
             }
         }
 

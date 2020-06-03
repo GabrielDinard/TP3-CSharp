@@ -38,17 +38,7 @@ namespace Aniversario.Dados
 
                 Pessoa pessoa = new Pessoa(nome, sobrenome, dataDeAniversario);
 
-                pessoasList.Add(pessoa);
-
-                var dataAtual = DateTime.Now;
-
-                if (dataDeAniversario == dataAtual)
-                {
-                    Console.Clear();
-
-                    Console.WriteLine("Essas pessoas fazem aniversário hoje:\n");
-                    Console.WriteLine($"{nome} {sobrenome}");                    
-                }
+                pessoasList.Add(pessoa);               
             }
               return pessoasList;
         }

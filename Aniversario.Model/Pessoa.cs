@@ -3,7 +3,6 @@ using System.Linq;
 using System.Collections.Generic;
 
 namespace Aniversario.Model
-
 {
     public class Pessoa
     {
